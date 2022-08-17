@@ -4,6 +4,10 @@ local fix = {}
 
 -- add callbacks
 
+function fix:getActualMaxHearts(player)
+	return player:GetMaxHearts() + player:GetBoneHearts() * 2
+end
+
 function fix:getPrice(player, price)
 	if player:HasTrinket(TrinketType.TRINKET_YOUR_SOUL) then
 		return PickupPrice.PRICE_SOUL
@@ -18,7 +22,7 @@ function fix:getPrice(player, price)
 			return -7
 		end
 		
-		if player:GetMaxHearts() < 2 then
+		if fix:getActualMaxHearts(player) < 2 then
 			return PickupPrice.PRICE_THREE_SOULHEARTS
 		end
 		
@@ -28,11 +32,11 @@ function fix:getPrice(player, price)
 			return -8
 		end
 		
-		if player:GetMaxHearts() < 2 then
+		if fix:getActualMaxHearts(player) < 2 then
 			return PickupPrice.PRICE_THREE_SOULHEARTS
 		end
 		
-		if player:GetMaxHearts() < 4 then
+		if fix:getActualMaxHearts(player) < 4 then
 			return PickupPrice.PRICE_ONE_HEART_AND_TWO_SOULHEARTS
 		end
 		

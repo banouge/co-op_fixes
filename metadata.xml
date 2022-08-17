@@ -10,7 +10,7 @@ Modded cards, pills, runes, and hearts may not render properly in Esau's UI. Als
 The mod also has the option to change Devil Deal prices to take into account the closest player's health. That way, any player with enough health will be able to take deals. Without the mod, you can get a situation where a player with only soul hearts will be unable to take deals if another player has red hearts.
 
 Side note: For whatever reason, Esau's health doesn't display properly even for Player 1. As you can see in the screenshot, Esau's eternal heart is on his half-filled bone heart in the vanilla UI. It should be on the rotten bone heart because taking damage will remove the eternal heart before the rotten heart. I don't think I have any mods installed that would cause this graphical error, so it may be a bug in the base game. The custom UI this mod adds displays Esau's health properly (and it looks cleaner in my opinion).</description>
-    <version>1.3</version>
+    <version>1.4</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Tweaks"/>
